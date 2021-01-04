@@ -1,0 +1,374 @@
+bac
+
+/* global style  */
+htm {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* globalny styl h2 */
+.header-icon {
+    display: flex;
+    font-size: 3rem;
+    width: 60%;
+    align-items: center;
+    margin: 0 auto 40px auto;
+    color: #94b800;
+
+}
+
+.header-icon i {
+    padding: 0 25px;
+
+}
+
+/* stylizacja kresek */
+.header-icon::before,
+.header-icon::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.btn {
+    display: block;
+    padding: 15px 45px;
+    background-color: #94b800;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn.border {
+    background-color: transparent;
+    border: 1px solid #656565;
+    transition: .3s,
+
+
+}
+
+.btn.border:hover {
+    background-color: #94b800;
+    border-color: #94b800;
+
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    /* wysrodkowanie elementu margin 0 auto */
+    margin: 0 auto;
+
+}
+
+/* /* Header Section * */
+
+.header {
+    padding: 50px, 0;
+    min-height: 100vh;
+    background-image: url("../img/slider-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+    display: flex;
+    /* centrowanie w pionie i poziomie */
+    flex-direction: column;
+    /* centruje w pionie */
+    justify-content: center;
+    /* centrowanie w poziomie */
+    align-items: center;
+
+
+}
+
+.header .restaurant {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+
+
+}
+
+.header.icon {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 0 40px 0;
+}
+
+.header .icon i {
+    color: #94b800;
+    font-size: 3rem;
+    padding: 0 20px;
+}
+
+.header .icon::before,
+.headre .icon::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.header h1 {
+    color: #ffff;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+}
+
+@media(max-width:900px) {
+    .header .restaurant {
+        font-size: 2rem;
+    }
+}
+
+.header h1 {
+    font-size: 3rem;
+}
+
+@media (max-width:500px) {
+    .header .restaurant {
+        font-size: 1.25rem;
+    }
+
+    .header .icon i {
+        font-size: 3rem;
+    }
+
+    .header h1 {
+        font-size: 2.25rem;
+    }
+}
+
+/* nav nawigacja stylizcja */
+
+
+nav {
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav .container .menu li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 35px 18px;
+    transition: .3s;
+}
+
+nav .container .menu li a:hover {
+    color: #94b800;
+
+}
+
+nav .container .menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #94b800;
+
+}
+
+nav .container .menu li a:hover:before {
+    width: 100%;
+}
+
+/* wysuwane menu */
+nav .container .menu li {
+    position: relative;
+}
+
+nav .container .menu li .sub-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 20;
+    margin: 0;
+    list-style: none;
+    background-color: #000000;
+    min-width: 300px;
+    display: none;
+}
+
+nav .container .menu li .sub-menu li:last-child {
+    margin-bottom: 0;
+
+}
+
+nav .container .menu li .sub-menu a {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+nav .container .menu li:hover .sub-menu {
+    display: block;
+
+}
+
+/* kod rozsuwanego menu */
+
+/* sekcja news */
+.news {
+    padding: 100px 0;
+}
+
+.news h2 {
+    /* text-align: center;-wisrodkowanie h2 */
+    text-align: center;
+    margin: 0 0 25x 0;
+    text-transform: uppercase;
+    font-size: 1.875;
+}
+
+/* ulozenie obrazku obok siebie */
+.news .news-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.news .news-boxes .box {
+    width: calc(100%/3);
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+}
+
+.news .news-boxes .box img {
+    display: block;
+    width: 100%;
+    /* odstep mniedzy d */
+}
+
+.news .news-boxes .box .time-data {
+    color: #b3b3b3;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.news .news-boxes .box a {
+    /* usuwanie podkreslenia  link*/
+    text-decoration: none;
+    font-size: 1.56253;
+    color: #000000;
+    font-weight: 700;
+}
+
+.news .news-boxes .box p {
+    margin: 15px 0 0 0;
+    line-height: 1, 75rem;
+    color: #636363;
+
+}
+
+/* RWD */
+@media(max-width:800px) {
+    .news .news-boxes .box {
+        width: 50%;
+    }
+
+}
+
+@media(max-width:500px) {
+    .news .news-boxes .box {
+        width: 100%;
+
+    }
+
+    .news .news-boxes .box p {
+        display: none;
+    }
+
+}
+
+/* stylizacja bestseller */
+
+.bestseller {
+    padding: 100px 0;
+    background-image: url(../img/popular-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+/* przciemnienie zdjecia */
+.bestseller::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+.bestseller .container {
+    position: relative;
+}
+
+.bestseller .container h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+
+
+}
+
+/* ustawienie linkow obok siebie */
+
+.bestseller .container .categories {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.bestseller .container .categories li {
+    margin: 0, 20x 20px 0;
+}
+
+.bestseller .container .categories li:last-child {
+    margin: 0;
+}
